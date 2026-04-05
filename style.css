@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #2f3640;
+  color: white;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+.cards div {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.cards div:hover {
+  transform: translateY(-5px);
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#themeToggle {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+body.dark {
+  background: #121212;
+  color: #ffffff;
+}
+
+body.dark .cards div {
+  background: #1e1e1e;
+  color: white;
+}
+
+body.dark canvas {
+  background: #1e1e1e;
+}
+
+body.dark table {
+  background: #1e1e1e;
+  color: white;
+}
+
+body.dark th,
+body.dark td {
+  border-color: #333;
+}
+
+body.dark input,
+body.dark select,
+body.dark button {
+  background: #2c2c2c;
+  color: white;
+  border: 1px solid #444;
+}
+
+body.dark #insights {
+  background: #1e1e1e;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+section {
+  padding: 20px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+input,
+select,
+button {
+  padding: 8px;
+}
+
+button {
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+#insights {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+@media (max-width: 992px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .charts {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .charts {
+    grid-template-columns: 1fr;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  input,
+  select,
+  button {
+    width: 100%;
+  }
+}

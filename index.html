@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Finance Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h2>Finance Dashboard</h2>
+
+    <div class="header-controls">
+      <button id="themeToggle">🌙</button>
+
+      <select id="role">
+        <option value="viewer">Viewer</option>
+        <option value="admin">Admin</option>
+      </select>
+    </div>
+
+  </header>
+
+  <!-- SUMMARY CARDS -->
+  <section class="cards">
+    <div id="balance"></div>
+    <div id="income"></div>
+    <div id="expense"></div>
+  </section>
+
+  <!-- CHARTS -->
+  <section class="charts">
+    <canvas id="lineChart"></canvas>
+    <canvas id="pieChart"></canvas>
+  </section>
+
+  <!-- TRANSACTIONS -->
+  <section>
+    <h3>Transactions</h3>
+
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search by category">
+
+      <select id="filter">
+        <option value="all">All</option>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+
+      <button id="addBtn">Add Transaction</button>
+    </div>
+
+    <table id="table"></table>
+  </section>
+
+  <!-- INSIGHTS -->
+  <section>
+    <h3>Insights</h3>
+    <div id="insights"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
